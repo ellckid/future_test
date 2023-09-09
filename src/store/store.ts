@@ -9,6 +9,7 @@ export default class Store {
     isLoading = false;
     searchParams = {
         searchString: '',
+        pageNumber: 1,
         pageSize: 0,
         sortingMethod: '',
         category: ''
@@ -28,6 +29,7 @@ export default class Store {
     }
     setSearchParams(searchParams: {
         searchString: string,
+        pageNumber: number,
         pageSize: number,
         sortingMethod: string,
         category: string
@@ -48,7 +50,7 @@ export default class Store {
                 this.setbooks(response.items)
             }
 
-            this.setSearchParams({ searchString, pageSize, sortingMethod, category })
+            this.setSearchParams({ searchString, pageNumber, pageSize, sortingMethod, category })
             console.log(response.items)
             console.log(response.totalItems)
             console.log(this.searchParams)

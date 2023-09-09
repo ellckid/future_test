@@ -1,3 +1,25 @@
+@media (min-width: 1010px) {
+    .search__upperline {
+        justify-content: space-between;
+        gap: auto;
+    }
+
+    .search__lowerline {
+        justify-content: left;
+    }
+}
+
+@media (max-width: 1009px) {
+    .search__upperline {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .search__lowerline {
+        justify-content: center;
+    }
+}
+
 .search {
     display: flex;
     flex-direction: column;
@@ -9,40 +31,60 @@
 .search__upperline {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 
     padding: 10px 0px;
-    gap: 20px;
+
+
+}
+
+.input__container {
+    display: flex;
+    position: relative;
+    width: 85%;
+    min-width: 270px;
+    align-items: center;
+}
+
+.input__img {
+    position: absolute;
+    left: 20px;
+    z-index: 1;
 }
 
 .search__input {
     box-sizing: border-box;
-    width: 1200px;
+    width: 100%;
     height: 80px;
     border-radius: 12px;
     background: #F2F4F8;
-    padding: 23px 20px;
+    padding: 23px 65px;
 
-    color: #000;
+    color: #999FAA;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 26px;
-    /* 130% */
+
+}
+
+.search__input:focus {
+    color: #000;
 }
 
 .search__button {
     box-sizing: border-box;
-    width: 120px;
-
+    width: 10%;
+    min-width: 100px;
     display: flex;
     padding: 27px 28px;
     justify-content: center;
     align-items: center;
 
     border-radius: 12px;
-    background: #333;
+    background: #000;
 
     color: #FFF;
     font-family: Inter;
@@ -53,14 +95,41 @@
     /* 130% */
 }
 
+.search__button:hover {
+    background-color: #333333;
+}
+
+.search__button:focus {
+    outline: auto;
+}
+
 .search__lowerline {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
+.select__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    min-width: 270px;
+    width: 30%;
+
+    z-index: 0;
+}
+
+.select__img {
+    position: absolute;
+    right: 20px;
+    z-index: 0;
+}
+
 .search__select {
-    min-width: 400px;
+
+    width: 100%;
     padding: 27px 20px;
     border-radius: 12px;
     border: 3px solid #F2F4F8;
@@ -71,5 +140,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: 26px;
-    /* 130% */
+
+    appearance: none;
+
+    cursor: pointer;
+    z-index: 1;
 }

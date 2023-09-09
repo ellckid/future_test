@@ -25,12 +25,10 @@ function SearchPage() {
             <Search searchBooks={searchBooks}></Search>
             {store.isLoading && <Loader></Loader>}
             {store.booksTotalCount == -1 && <h1 className={classes.notFound}>По вашему запросу ничего не найдено</h1>}
-            <BookList books={books} booksTotalCount={paginationArray} searchBooks={searchBooks} />
+            <BookList books={books} booksTotalCount={store.booksTotalCount} booksCountArray={paginationArray} searchBooks={searchBooks} />
         </section >
     )
 }
 
 export default observer(SearchPage)
-
-
 

@@ -7,7 +7,7 @@ import { context } from '../../main'
 
 type paginationProps = {
     paginationArray: Array<number>
-    searchBooks: Function
+    updateFunction: Function
 }
 function Pagination(props: paginationProps) {
 
@@ -30,15 +30,16 @@ function Pagination(props: paginationProps) {
             {
 
                 props.paginationArray.filter((p) => isPageNumberInRange(p)).map((item, id) => (
-                    <label className={classes.pagination__label} key={id} form={'radio' + { item }} >
-                        <input className={classes.pagination__radio} type="radio" name='pagination' value={item} id={'radio' + item} onClick={() => props.searchBooks(store.searchParams.searchString, item, store.searchParams.pageSize, store.searchParams.sortingMethod, store.searchParams.category)} />
+                    <label className={classes.pagination__label} key={id} >
+                        {store.searchParams.pageNumber == item && <input className={classes.pagination__radio} type="radio" name='pagination' value={item} data-testid={'radio' + item} checked onChange={() => props.updateFunction(store.searchParams.searchString, item, store.searchParams.pageSize, store.searchParams.sortingMethod, store.searchParams.category)} />}
+                        {store.searchParams.pageNumber != item && <input className={classes.pagination__radio} type="radio" name='pagination' value={item} data-testid={'radio' + item} onChange={() => props.updateFunction(store.searchParams.searchString, item, store.searchParams.pageSize, store.searchParams.sortingMethod, store.searchParams.category)} />}
                         <span className={classes.pagination__span}>{item}</span>
                     </label>
                 ))
             }
             {paginationArray.length > 0 && <button onClick={() => setPortionNumber(portionNumber + 1)} disabled={isLastPortionNumber()} className={classes.pagination__button}><img className={classes.pagination__button__img + " " + classes.right} src='/arrow.svg'></img></button>}
 
-        </fieldset>
+        </fieldset >
     )
 }
 

@@ -1,10 +1,25 @@
 .books_container {
     width: 100%;
     height: fit-content;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.books__count {
+    width: 100%;
+
+    text-align: center;
+    color: #999FAA;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.black {
+    color: #000;
 }

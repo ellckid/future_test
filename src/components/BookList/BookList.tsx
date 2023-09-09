@@ -7,19 +7,25 @@ import Pagination from '../pagination/Pagination'
 
 type BookListProps = {
     books: bookInfo[]
-    booksTotalCount: Array<number>
+    booksCountArray: Array<number>
     searchBooks: Function
+    booksTotalCount: number
+
 }
 function BookList(props: BookListProps) {
 
     return (
         <div className={classes.books_container}>
+
             {
                 _.map(props.books, (item, id) => (
                     <Book key={id} name={item.volumeInfo.title} author={item.volumeInfo.authors} genre={item.volumeInfo.categories} imgURL={item.volumeInfo.imageLinks?.thumbnail}></Book >
                 ))
             }
-            <Pagination paginationArray={props.booksTotalCount} searchBooks={props.searchBooks} ></Pagination>
+
+            {props.booksTotalCount > 0 && <span className={classes.books__count}><span className={classes.books__count + ' ' + classes.black}>{props.booksTotalCount}</span> результатов</span>}
+
+            <Pagination paginationArray={props.booksCountArray} updateFunction={props.searchBooks} ></Pagination>
         </div>
 
     )
