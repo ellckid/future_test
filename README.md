@@ -11,7 +11,7 @@ React ts приложение-поиск для Google Books API.
 ## Ссылка на сайт
 
 ```
-
+https://ellckid.github.io/future_test/
 ```
 
 ## Скрипты
