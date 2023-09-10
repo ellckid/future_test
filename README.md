@@ -1,17 +1,17 @@
 # Тестовое задание для Фьюче
 
 React ts приложение-поиск для Google Books API.
-– Стейт менеджер: MobX
-– Сторонние библиотеки: Lodash для map и foreach с обьектами, Axios для отправки запросов
-– Линтеры: esLint, editorConfigChecker
+- Стейт менеджер: MobX
+- Сторонние библиотеки: Lodash для map и foreach с обьектами, Axios для отправки запросов
+- Линтеры: esLint, editorConfigChecker
 - Сборщик: vite
-– Тестирование ts/tsx: Jest, react development tools
-– Тестирование запросов: Postman
+- Тестирование ts/tsx: Jest, react development tools
+- Тестирование запросов: Postman
 
 ## Ссылка на сайт
 
 ```
-https://ellckid.github.io/optimal_city_test
+
 ```
 
 ## Скрипты
