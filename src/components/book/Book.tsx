@@ -13,7 +13,7 @@ function Book(props: bookProps) {
 
     return (
         <article className={classes.book_article}>
-            <a onClick={() => router('/' + props.id)}>
+            <a onClick={() => router('/future_test/' + props.id)}>
                 <img className={classes.book_article__img} src={props.imgURL}></img>
             </a>
 

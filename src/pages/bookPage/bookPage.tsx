@@ -43,8 +43,8 @@ function BookPage() {
                     <a className={classes.article_link} href={book?.volumeInfo.canonicalVolumeLink}>Открыть в Google Books</a>
                 </div>
             </article>
-            <Link className={classes.back_container} to='/'>
-                <img src='/arrow.svg'></img>
+            <Link className={classes.back_container} to='/future_test/'>
+                <img src='/future_test/arrow.svg'></img>
                 <a className={classes.article_link}>Назад</a>
             </Link>
         </section >

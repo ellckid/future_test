@@ -16,7 +16,7 @@ function Search(props: searchProps) {
         }}>
             <div className={classes.search__upperline}>
                 <div className={classes.input__container}>
-                    <img className={classes.input__img} src='/Search_icon.svg'></img>
+                    <img className={classes.input__img} src='/future_test/Search_icon.svg'></img>
                     <input className={classes.search__input} type='text' placeholder='Поиск...' value={searchString} onChange={e => setSearchString(e.target.value)} />
                 </div>
 
@@ -24,7 +24,7 @@ function Search(props: searchProps) {
             </div>
             <div className={classes.search__lowerline}>
                 <div className={classes.select__container}>
-                    <img className={classes.select__img} src='/select_icon.svg'></img>
+                    <img className={classes.select__img} src='/future_test/select_icon.svg'></img>
                     <select className={classes.search__select} form="searchForm" onChange={e => setCategory(e.target.value)}>
                         <option defaultValue=' '>Все</option>
                         <option value='Art'>Искусство</option>
@@ -43,7 +43,7 @@ function Search(props: searchProps) {
                     </select>
                 </div>
                 <div className={classes.select__container}>
-                    <img className={classes.select__img} src='/select_icon.svg'></img>
+                    <img className={classes.select__img} src='/future_test/select_icon.svg'></img>
                     <select className={classes.search__select} form="searchForm" required onChange={e => setOrderBy(e.target.value)} >
                         <option defaultValue='RELEVANSE'>По релевантности</option>
                         <option value='NEWEST'>По новизне</option>

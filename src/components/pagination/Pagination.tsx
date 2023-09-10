@@ -26,7 +26,7 @@ function Pagination(props: paginationProps) {
 
     return (
         <fieldset className={classes.pagination}>
-            {paginationArray.length > 0 && <button onClick={() => setPortionNumber(portionNumber - 1)} disabled={isFirstPortionNumber()} className={classes.pagination__button}><img className={classes.pagination__button__img} src='/arrow.svg'></img></button>}
+            {paginationArray.length > 0 && <button onClick={() => setPortionNumber(portionNumber - 1)} disabled={isFirstPortionNumber()} className={classes.pagination__button}><img className={classes.pagination__button__img} src='/future_test/arrow.svg'></img></button>}
             {
 
                 props.paginationArray.filter((p) => isPageNumberInRange(p)).map((item, id) => (
@@ -37,7 +37,7 @@ function Pagination(props: paginationProps) {
                     </label>
                 ))
             }
-            {paginationArray.length > 0 && <button onClick={() => setPortionNumber(portionNumber + 1)} disabled={isLastPortionNumber()} className={classes.pagination__button}><img className={classes.pagination__button__img + " " + classes.right} src='/arrow.svg'></img></button>}
+            {paginationArray.length > 0 && <button onClick={() => setPortionNumber(portionNumber + 1)} disabled={isLastPortionNumber()} className={classes.pagination__button}><img className={classes.pagination__button__img + " " + classes.right} src='/future_test/arrow.svg'></img></button>}
 
         </fieldset >
     )
