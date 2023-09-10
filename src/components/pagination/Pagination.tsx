@@ -14,9 +14,9 @@ function Pagination(props: paginationProps) {
     const { store } = useContext(context)
     const paginationArray: number[] = usePagination(10, props.paginationArray.length)
 
-    let [portionNumber, setPortionNumber] = useState(1);
-    let leftPortionPageNumber = (portionNumber - 1) * 10 + 1;
-    let rightPortionPageNumber = portionNumber * 10;
+    const [portionNumber, setPortionNumber] = useState(1);
+    const leftPortionPageNumber = (portionNumber - 1) * 10 + 1;
+    const rightPortionPageNumber = portionNumber * 10;
 
     const isPageNumberInRange = (p: number) => p >= leftPortionPageNumber && p <= rightPortionPageNumber;
     const isFirstPortionNumber = () => portionNumber <= 1;
