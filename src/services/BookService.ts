@@ -12,6 +12,9 @@ export default class BookService {
 
         return $api.get<bookListResponce>(`?q=${searchString}+subject:${category}`, { params }).then(res => res.data)
     }
+    static async getBook(selfLink: string | undefined) {
+        return $api.get<bookInfo>(`${selfLink}`).then(res => res.data)
+    }
 }
 type bookListResponce = {
     items: Array<bookInfo>,

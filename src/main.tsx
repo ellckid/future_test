@@ -8,8 +8,9 @@ const store = new Store();
 export const context = createContext({
     store
 })
+const root = ReactDOM.createRoot(document.getElementById('root') || document.createElement('div'))
 
-ReactDOM.createRoot(document.getElementById('root') || document.createElement('div')).render(
+root.render(
     <React.StrictMode>
         <context.Provider value={{
             store

@@ -1,13 +1,16 @@
 import { observer } from 'mobx-react-lite'
-import SearchPage from './pages/searchPage/searchPage'
 import classes from './App.module.css'
+import Router from './components/router'
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
     return (
-        <main className={classes.pages_container}>
-            <SearchPage></SearchPage>
-        </main >
+        <BrowserRouter>
+            <main className={classes.pages_container}>
+                <Router />
+            </main >
+        </BrowserRouter>
     )
 }
 

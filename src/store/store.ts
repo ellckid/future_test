@@ -3,6 +3,7 @@ import BookService from '../services/BookService'
 import { bookInfo } from "../types/types";
 
 
+
 export default class Store {
     books: bookInfo[] = [];
     booksTotalCount: number = 0
@@ -37,6 +38,7 @@ export default class Store {
         this.searchParams = searchParams
     }
 
+
     async getBookList(searchString: string, pageNumber: number, pageSize: number, sortingMethod: string, category: string) {
         this.setLoading(true);
         try {
@@ -67,5 +69,21 @@ export default class Store {
         }
     }
 
+    async getBook(selfLink: string | undefined) {
+        this.setLoading(true);
+        try {
+            const response = (await BookService.getBook(selfLink))
+            if (response) {
+                return response
+            }
+
+        } catch (error) {
+            if (error == 429)
+                throw new Error('хорош дудосить')
+        }
+        finally {
+            this.setLoading(false)
+        }
+    }
 }
 

@@ -6,5 +6,4 @@ export const API_KEY = "AIzaSyDUXIw7OS6KiOjd8g4YC8WNvprnou-b8kI"
 const $api = axios.create({
     baseURL: API_URL
 })
-
 export default $api;

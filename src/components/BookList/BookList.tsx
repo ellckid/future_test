@@ -19,7 +19,7 @@ function BookList(props: BookListProps) {
 
             {
                 _.map(props.books, (item, id) => (
-                    <Book key={id} name={item.volumeInfo.title} author={item.volumeInfo.authors} genre={item.volumeInfo.categories} imgURL={item.volumeInfo.imageLinks?.thumbnail}></Book >
+                    <Book key={id} name={item.volumeInfo.title} author={item.volumeInfo.authors} genre={item.volumeInfo.categories} imgURL={item.volumeInfo.imageLinks?.thumbnail} id={item.id}></Book >
                 ))
             }
 

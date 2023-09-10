@@ -15,6 +15,7 @@ export type bookInfo = {
         },
         title?: string
         categories?: Array<string>
+        canonicalVolumeLink: string
     }
 }
 
